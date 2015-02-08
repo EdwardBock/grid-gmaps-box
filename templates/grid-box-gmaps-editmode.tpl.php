@@ -1,5 +1,5 @@
 Gmaps
 <?php 
-echo ($content->long != "")? "<br>".$content->long : "";
-echo ($content->lat != "")? "<br>".$content->lat : "" 
+echo ($content->coordinates->lng != "")? "<br>".$content->coordinates->lng : "";
+echo ($content->coordinates->lat != "")? "<br>".$content->coordinates->lat : "" 
 ?>

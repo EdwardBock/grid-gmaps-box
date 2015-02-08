@@ -5,8 +5,9 @@ class grid_gmaps_box extends grid_static_base_box
 	public function __construct()
 	{
 		$this->content=new StdClass();
-		$this->content->long = "";
-		$this->content->lat = "";
+		$this->content->coordinates = new StdClass();
+		$this->content->coordinates->lat = "";
+		$this->content->coordinates->lng = "";
 	}
 
 	public function type()
@@ -21,14 +22,9 @@ class grid_gmaps_box extends grid_static_base_box
 	public function contentStructure() {
 		$cs = array();
 		$cs[] = array(
-			'key' => 'long',
-			'label'=>t('Longitde'),
-			'type'=>'text',
-		);
-		$cs[] = array(
-			'key' => 'lat',
-			'label'=>t('Latitude'),
-			'type'=>'text',
+			'key' => 'coordinates',
+			'label'=>t('Lat & long'),
+			'type'=>'coordinates',
 		);
 		return $cs;
 	}

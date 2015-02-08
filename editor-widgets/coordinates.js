@@ -5,18 +5,28 @@
 * @package Palasthotel\Grid-Gmaps-Box
 */
 
+
 boxEditorControls['coordinates']=GridBackbone.View.extend({
-    className: "grid-editor-widget grid-editor-widget-text",
+    className: "grid-editor-widget grid-editor-widget-coordinates",
     initialize:function(){
 
     },
     render:function(){
-        var text=this.model.container[this.model.structure.key];
-        if(!text)text="";
-        this.$el.html("<label>"+this.model.structure.label+"</label><input type=text class='dynamic-value' value='"+text+"'/>");
+        var coordinates=this.model.container[this.model.structure.key];
+        if(!coordinates)
+        {
+            coordinates = {lat: "", lng: ""};
+        }
+        this.$el.html("<label>"+this.model.structure.label+"</label>"+
+            "<input type=text class='dynamic-value lat' value='"+coordinates.lat+"'/><br>"+
+            "<input type=text class='dynamic-value lng' value='"+coordinates.lng+"'/>");
         return this;
     },
     fetchValue:function(){
-        return jQuery(this.$el).find("input").val();
+        var coordinates = {
+            lat: this.$el.find(".lat").val(),
+            lng: this.$el.find(".lng").val()
+        }
+        return coordinates;
     }
 });
