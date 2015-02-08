@@ -15,15 +15,7 @@ class grid_gmaps_box extends grid_static_base_box
 	}
 
 	public function build($editmode) {
-
-		if($editmode) 
-		{
-			return t("Google Maps V3"); 
-		}
-		else
-		{
-			return $this->content; 
-		}
+		return $this->content;
 	}
 
 	public function contentStructure() {

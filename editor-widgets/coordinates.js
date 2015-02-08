@@ -1,8 +1,8 @@
 /**
-* @author Palasthotel <rezeption@palasthotel.de>
-* @copyright Copyright (c) 2014, Palasthotel
+* @author Edward Bock <me@edwardbock.de>
+* @copyright Copyright (c) 2015, Edward Bock
 * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
-* @package Palasthotel\Grid
+* @package Palasthotel\Grid-Gmaps-Box
 */
 
 boxEditorControls['coordinates']=GridBackbone.View.extend({
