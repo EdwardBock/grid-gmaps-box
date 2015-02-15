@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Grid GoogeMaps V3 Box
+Plugin Name: Grid GoogeMaps
 Plugin URI: http://edwardbock.de/
 Description: A box that renders GoogleMaps Api V3
 Version: 1.0
