@@ -18,7 +18,7 @@ add_action("grid_load_classes", "grid_gmaps_box_load");
 function grid_gmaps_box_load(){
 	wp_enqueue_script(
 		'grid-box-gmail-api',
-		'https://maps.googleapis.com/maps/api/js?v=3.exp'
+		'https://maps.googleapis.com/maps/api/js?v=3'
 	);
 	wp_enqueue_script(
 		'grid-box-gmail-script',
